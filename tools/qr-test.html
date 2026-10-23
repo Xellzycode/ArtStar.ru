@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <title>QR self-check</title>
+  <style>body{font:14px monospace;background:#111;color:#eee;padding:24px}pre{white-space:pre-wrap}</style>
+</head>
+<body>
+<pre id="out">running...</pre>
+<script src="../js/qr.js"></script>
+<script>
+(async () => {
+  const cases = await (await fetch('qr-reference.json')).json();
+  const fails = [];
+
+  cases.forEach((c) => {
+    const code = qrEncode(c.data, { level: c.level, mask: c.mask });
+    if (!code) { fails.push(`${c.data.slice(0,12)} ${c.level}/${c.mask}: no code`); return; }
+    if (code.version !== c.version) {
+      fails.push(`${c.data.slice(0,12)} ${c.level}/${c.mask}: version ${code.version} != ${c.version}`);
+      return;
+    }
+    const rows = [...code.modules].map((r) => [...r].join(''));
+    const diff = rows.findIndex((r, i) => r !== c.rows[i]);
+    if (diff >= 0) fails.push(`${c.data.slice(0,12)} ${c.level}/${c.mask}: row ${diff}\n got ${rows[diff]}\n ref ${c.rows[diff]}`);
+  });
+
+  const auto = qrEncode('http://127.0.0.1:5500/profile.html?u=demo');
+  document.getElementById('out').textContent =
+    `cases: ${cases.length}\nfails: ${fails.length}\nauto mask pick: v${auto.version} mask ${auto.mask} size ${auto.size}\n\n` +
+    fails.slice(0, 8).join('\n\n');
+  window.__qrResult = { total: cases.length, fails: fails.length, sample: fails.slice(0, 3) };
+})();
+</script>
+</body>
+</html>
