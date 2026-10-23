@@ -1,0 +1,60 @@
+:root {
+
+  --bg-primary: #000000;
+  --bg-secondary: #0a0a0a;
+  --bg-card: #111111;
+  --bg-elevated: #1a1a1a;
+
+  --accent: #ffffff;
+  --accent-hover: #e5e5e5;
+  --accent-muted: rgba(255, 255, 255, 0.08);
+  --accent-glow: rgba(255, 255, 255, 0.18);
+
+  --text-primary: #ffffff;
+  --text-secondary: #a3a3a3;
+  --text-muted: #737373;
+
+  --border: rgba(255, 255, 255, 0.1);
+  --border-hover: rgba(255, 255, 255, 0.22);
+  --border-strong: rgba(255, 255, 255, 0.35);
+
+  --discord: #5865f2;
+  --discord-hover: #4752c4;
+
+  --success: #ffffff;
+  --error: #ffffff;
+
+  --glass-bg: rgba(10, 10, 10, 0.55);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-blur: 20px;
+
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Inter', system-ui, sans-serif;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-phone: 30px;
+
+  --iphone17-screen-w: 402px;
+  --iphone17-screen-h: 874px;
+  --iphone17-bezel: 12px;
+  --iphone17-frame-w: 426px;
+  --iphone17-frame-h: 898px;
+  --iphone17-radius: 55px;
+  --iphone17-screen-radius: 44px;
+  --iphone17-island-w: 126px;
+  --iphone17-island-h: 37px;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.6);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.7);
+  --shadow-glow: 0 0 32px var(--accent-glow);
+
+  --transition: 0.2s ease;
+  --transition-slow: 0.4s ease;
+
+  --dock-top: 88px;
+  --dock-h: 58px;
+}

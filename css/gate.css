@@ -1,0 +1,247 @@
+body.gate-open {
+  overflow: hidden;
+}
+
+.gate {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.86);
+  backdrop-filter: blur(18px) saturate(120%);
+  animation: gateIn 0.5s ease both;
+}
+
+.gate.is-leaving {
+  animation: gateOut 0.6s cubic-bezier(0.4, 0, 0.2, 1) both;
+  pointer-events: none;
+}
+
+.gate-aura {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: min(680px, 130vw);
+  aspect-ratio: 1;
+  transform: translate(-50%, -50%);
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.05) 34%, transparent 62%),
+    conic-gradient(from 0deg, transparent 0deg, rgba(255, 255, 255, 0.12) 60deg, transparent 120deg, transparent 180deg, rgba(255, 255, 255, 0.12) 240deg, transparent 300deg);
+  filter: blur(46px);
+  animation: gateAura 18s linear infinite;
+}
+
+.gate-panel {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+  padding: 40px 32px 32px;
+  text-align: center;
+  background: rgba(14, 14, 14, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 24px;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset,
+    0 30px 80px rgba(0, 0, 0, 0.8),
+    0 0 0 6px rgba(255, 255, 255, 0.02),
+    0 0 70px rgba(255, 255, 255, 0.14),
+    0 0 160px rgba(255, 255, 255, 0.07);
+  animation: gatePanelIn 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+body.gate-open .profile-back-link,
+body.gate-open .profile-contacts-btn,
+body.gate-open .profile-view-toggle {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.gate-panel::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(140deg, rgba(255, 255, 255, 0.5), transparent 42%, transparent 62%, rgba(255, 255, 255, 0.22));
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+.gate-avatar {
+  width: 72px;
+  height: 72px;
+  margin: 0 auto 20px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #fff;
+  color: #000;
+  font-size: 28px;
+  font-weight: 700;
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2), 0 0 44px rgba(255, 255, 255, 0.3);
+  animation: gatePulse 3.2s ease-in-out infinite;
+}
+
+.gate-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gate-eyebrow {
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.gate-name {
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 10px;
+}
+
+.gate-text {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  margin-bottom: 26px;
+}
+
+.gate-check {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  padding: 16px 18px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background var(--transition), border-color var(--transition), box-shadow var(--transition), transform var(--transition);
+}
+
+.gate-check:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.28);
+  box-shadow: 0 0 32px rgba(255, 255, 255, 0.14);
+  transform: translateY(-1px);
+}
+
+.gate-check:focus-visible {
+  outline: none;
+  border-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.12);
+}
+
+.gate-checkbox {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border: 1.5px solid rgba(255, 255, 255, 0.32);
+  border-radius: 7px;
+  color: #000;
+  transition: background var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.gate-checkbox svg {
+  opacity: 0;
+  transform: scale(0.4);
+  transition: opacity 0.2s ease, transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.gate-check.is-checked {
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 0 48px rgba(255, 255, 255, 0.2);
+}
+
+.gate-check.is-checked .gate-checkbox {
+  background: #fff;
+  border-color: #fff;
+  box-shadow: 0 0 22px rgba(255, 255, 255, 0.55);
+}
+
+.gate-check.is-checked .gate-checkbox svg {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.gate-check:disabled {
+  cursor: default;
+}
+
+.gate-hint {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  margin-top: 16px;
+  font-size: 11.5px;
+  letter-spacing: 0.01em;
+  color: var(--text-muted);
+}
+
+.gate-hint svg {
+  flex-shrink: 0;
+}
+
+@keyframes gateIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes gateOut {
+  from { opacity: 1; }
+  to { opacity: 0; backdrop-filter: blur(0); }
+}
+
+@keyframes gatePanelIn {
+  from { opacity: 0; transform: translateY(24px) scale(0.96); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes gateAura {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes gatePulse {
+  0%, 100% { box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.2), 0 0 40px rgba(255, 255, 255, 0.24); }
+  50% { box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3), 0 0 64px rgba(255, 255, 255, 0.42); }
+}
+
+@media (max-width: 480px) {
+  .gate-panel {
+    padding: 32px 22px 26px;
+  }
+
+  .gate-name {
+    font-size: 22px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gate,
+  .gate.is-leaving,
+  .gate-panel {
+    animation-duration: 0.01ms;
+  }
+
+  .gate-aura,
+  .gate-avatar {
+    animation: none;
+  }
+}
