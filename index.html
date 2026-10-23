@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Art Star — персональная визитка с полной настройкой оформления.">
+  <title>Art Star — персональная визитка</title>
+  <link rel="icon" href="images/artstar.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="logo">
+        <img class="logo-mark" src="images/artstar.png" alt="">
+        <span class="logo-word logo-shine">Art Star</span>
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="/mefloverxd">Пример</a>
+        <a href="premium.html">Star+</a>
+        <button type="button" data-open-contacts>Контакты</button>
+      </div>
+
+      <div class="nav-auth" id="nav-auth"></div>
+
+      <button class="menu-toggle" id="menu-toggle" aria-label="Меню">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="hero-bg">
+      <canvas class="hero-canvas" id="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero-bg-gradient"></div>
+      <div class="hero-bg-grid"></div>
+      <div class="hero-spotlight" id="hero-spotlight" aria-hidden="true"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-tag">
+        <span class="tag tag-live">
+          <span class="tag-dot" aria-hidden="true"></span>
+          Онлайн
+        </span>
+      </div>
+
+      <h1>Персональная визитка.<br><span>Собственный стиль.</span></h1>
+
+      <p class="hero-desc">
+        Одна ссылка для <span class="rotator" id="hero-rotator"></span> —
+        аватар, фон и музыка на одной карточке.
+        Настройки также можно загрузить из файла.
+      </p>
+
+      <div class="hero-actions">
+        <a href="dashboard.html" class="btn btn-primary btn-lg">Создать карточку</a>
+        <a href="/mefloverxd" class="btn btn-secondary btn-lg">Пример карточки</a>
+      </div>
+
+      <div class="hero-url">
+        <span id="hero-url-host">artstar</span>/<strong id="hero-url-name">username</strong><span class="type-caret" aria-hidden="true"></span>
+      </div>
+
+      <div class="hero-stats">
+        <div>
+          <div class="hero-stat-value">8</div>
+          <div class="hero-stat-label">шаблонов карточек</div>
+        </div>
+        <div>
+          <div class="hero-stat-value">9</div>
+          <div class="hero-stat-label">эффектов фона</div>
+        </div>
+        <div>
+          <div class="hero-stat-value">∞</div>
+          <div class="hero-stat-label">вариантов оформления</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-preview">
+      <div class="phone-frame phone-frame--iphone17">
+        <div class="phone-screen">
+          <div class="phone-dynamic-island" aria-hidden="true"></div>
+          <div class="phone-vibe" id="phone-vibe"></div>
+        </div>
+      </div>
+      <div class="phone-dots" id="phone-dots" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track" id="marquee-track"></div>
+  </div>
+
+  <section class="section features" id="features">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2>Возможности карточки</h2>
+        <p>Фон, курсор, музыка, бейджи и ссылки настраиваются в одном конструкторе.</p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </div>
+          <h3>Шаблоны карточек</h3>
+          <p>Восемь готовых вариантов оформления: стример, музыкант, дизайнер и другие. После выбора шаблона параметры можно изменить.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2"/>
+            </svg>
+          </div>
+          <h3>Видео-фон</h3>
+          <p>Файл или ссылка на видео. Ролик воспроизводится на фоне карточки циклически.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </div>
+          <h3>Живое превью</h3>
+          <p>Изменения отображаются сразу. На телефоне превью открывается поверх конструктора, прокрутка настроек сохраняется.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+          </div>
+          <h3>Посты и виджеты</h3>
+          <p>Записи с изображениями, статус, часы, обратный отсчёт, просмотры и оценки.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+            </svg>
+          </div>
+          <h3>Ссылка и QR-код</h3>
+          <p>Одна ссылка на все социальные сети, QR-код и готовое изображение для публикации.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/><path d="M9 18V5l12-2v13"/>
+            </svg>
+          </div>
+          <h3>Музыка</h3>
+          <p>Композиция запускается при открытии карточки. Воспроизведение отключается кнопкой на карточке.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section cta-section">
+    <div class="container reveal">
+      <h2>Карточка собирается в конструкторе</h2>
+      <p>Оформление настраивается в конструкторе. Готовая страница открывается по короткой ссылке с именем пользователя.</p>
+      <a href="dashboard.html" class="btn btn-primary btn-lg">Открыть конструктор</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="dashboard.html">Конструктор</a>
+        <a href="/mefloverxd">Пример профиля</a>
+        <a href="premium.html">Star+</a>
+        <a href="offer.html">Оферта</a>
+        <a href="privacy.html">Конфиденциальность</a>
+        <a href="rules.html">Правила</a>
+        <button type="button" data-open-contacts>Контакты</button>
+      </div>
+      <p>© 2026 Art Star</p>
+    </div>
+  </footer>
+
+  <script src="js/auth.js"></script>
+  <script src="js/premium.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/ambient.js"></script>
+  <script src="js/landing-fx.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Оплата Art Star Star+ — 499 ₽, без ограничения по сроку.">
+  <title>Оплата Star+ — Art Star</title>
+  <link rel="icon" href="images/artstar.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/premium.css">
+</head>
+<body class="page-premium page-pay">
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="premium-sky" aria-hidden="true">
+    <canvas class="premium-sky-canvas" id="premium-canvas"></canvas>
+    <div class="premium-hero-glow pay-glow"></div>
+  </div>
+
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="logo">
+        <img class="logo-mark" src="images/artstar.png" alt="">
+        <span class="logo-word logo-shine">Art Star</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="premium.html">Star+</a>
+        <a href="dashboard.html">Конструктор</a>
+        <button type="button" data-open-contacts>Контакты</button>
+      </div>
+      <div class="nav-auth" id="nav-auth"></div>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Меню">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <div class="pay-stage">
+    <div class="pay-wrap">
+      <div class="pay-card" id="pay-card"></div>
+    </div>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/premium.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/ambient.js"></script>
+  <script src="js/premium-page.js"></script>
+  <script src="js/qr.js"></script>
+  <script src="js/pay.js"></script>
+</body>
+</html>

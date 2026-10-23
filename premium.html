@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Art Star Star+ — расширенные возможности карточки. Разовый платёж 499 ₽, без ограничения по сроку.">
+  <title>Star+ — Art Star</title>
+  <link rel="icon" href="images/artstar.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/premium.css">
+</head>
+<body class="page-premium">
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="premium-sky" aria-hidden="true">
+    <canvas class="premium-sky-canvas" id="premium-canvas"></canvas>
+  </div>
+
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="logo">
+        <img class="logo-mark" src="images/artstar.png" alt="">
+        <span class="logo-word logo-shine">Art Star</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="index.html">Главная</a>
+        <a href="dashboard.html">Конструктор</a>
+        <button type="button" data-open-contacts>Контакты</button>
+      </div>
+      <div class="nav-auth" id="nav-auth"></div>
+      <button class="menu-toggle" id="menu-toggle" aria-label="Меню">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <section class="premium-hero">
+    <div class="premium-hero-bg" aria-hidden="true">
+      <div class="premium-hero-glow"></div>
+      <div class="premium-hero-ring"></div>
+    </div>
+    <div class="container premium-hero-inner">
+      <span class="premium-kicker">
+        <img class="premium-kicker-star" src="images/artstar.png" alt="">
+        Art Star · Star+
+      </span>
+      <h1 class="premium-title">
+        <span class="premium-title-line">Карточка</span>
+        <span class="premium-title-line premium-title-shine">с полной настройкой</span>
+      </h1>
+      <p>Разовый платёж открывает Star+ без ограничения по сроку: звезда у имени пользователя, бейдж Star+ и возможности, недоступные в бесплатной версии.</p>
+      <div class="premium-price">
+        <span class="premium-orbit" aria-hidden="true"><img src="images/artstar.png" alt=""></span>
+        <span class="premium-price-value">499 ₽</span>
+        <span class="premium-price-note">разовый платёж · без ежемесячной оплаты</span>
+      </div>
+      <div class="premium-hero-actions">
+        <a href="pay.html" class="btn btn-primary btn-lg premium-cta" id="premium-buy">Оформить Star+</a>
+        <a href="dashboard.html" class="btn btn-secondary btn-lg">Открыть конструктор</a>
+      </div>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span class="marquee-item">видео-фон</span>
+      <span class="marquee-item">gif-аватар</span>
+      <span class="marquee-item">собственный шрифт</span>
+      <span class="marquee-item">посты</span>
+      <span class="marquee-item">курсор .png</span>
+      <span class="marquee-item">сетка</span>
+      <span class="marquee-item">сканлайны</span>
+      <span class="marquee-item">перелив</span>
+      <span class="marquee-item">наклон</span>
+      <span class="marquee-item">фон для поста</span>
+      <span class="marquee-item">звезда у имени</span>
+      <span class="marquee-item">бейдж Star+</span>
+      <span class="marquee-item">видео-фон</span>
+      <span class="marquee-item">gif-аватар</span>
+      <span class="marquee-item">собственный шрифт</span>
+      <span class="marquee-item">посты</span>
+      <span class="marquee-item">курсор .png</span>
+      <span class="marquee-item">сетка</span>
+      <span class="marquee-item">сканлайны</span>
+      <span class="marquee-item">перелив</span>
+      <span class="marquee-item">наклон</span>
+      <span class="marquee-item">фон для поста</span>
+      <span class="marquee-item">звезда у имени</span>
+      <span class="marquee-item">бейдж Star+</span>
+    </div>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="reveal">Возможности Star+</h2>
+      <p class="section-lead reveal">Разовый платёж. Доступ без ограничения по сроку.</p>
+      <div class="premium-grid">
+        <article class="premium-card reveal">
+          <div class="premium-card-icon">▶</div>
+          <h3>Видео и GIF на фоне</h3>
+          <p>Видеофайл или анимированный GIF вместо статичного изображения.</p>
+        </article>
+        <article class="premium-card reveal">
+          <div class="premium-card-icon">♪</div>
+          <h3>Аудиофайлы большего размера</h3>
+          <p>В бесплатной версии — до 10 МБ. В Star+ — до 30 МБ.</p>
+        </article>
+        <article class="premium-card reveal">
+          <div class="premium-card-icon">Aa</div>
+          <h3>Собственный шрифт</h3>
+          <p>Загрузка файла .ttf. Шрифт применяется к имени на карточке.</p>
+        </article>
+        <article class="premium-card reveal">
+          <div class="premium-card-icon">✎</div>
+          <h3>Посты</h3>
+          <p>Короткие записи с изображением непосредственно на карточке.</p>
+        </article>
+        <article class="premium-card reveal">
+          <div class="premium-card-icon">↖</div>
+          <h3>Курсор и значок частиц</h3>
+          <p>Изображение PNG вместо стандартного курсора и собственный значок для частиц на фоне.</p>
+        </article>
+        <article class="premium-card reveal">
+          <div class="premium-card-icon">◉</div>
+          <h3>Анимированный аватар</h3>
+          <p>В бесплатной версии аватар статичен. Star+ поддерживает GIF.</p>
+        </article>
+        <article class="premium-card reveal">
+          <div class="premium-card-icon">▦</div>
+          <h3>Эффекты фона</h3>
+          <p>Сетка со следом курсора и сканлайны доступны только в Star+.</p>
+        </article>
+        <article class="premium-card reveal">
+          <div class="premium-card-icon">⌨</div>
+          <h3>Эффекты имени</h3>
+          <p>Печатная машинка, перелив и шифр доступны только в Star+.</p>
+        </article>
+        <article class="premium-card reveal">
+          <div class="premium-card-icon">⤡</div>
+          <h3>Наклон при наведении</h3>
+          <p>Карточка слегка следует за курсором.</p>
+        </article>
+        <article class="premium-card reveal">
+          <div class="premium-card-icon">▣</div>
+          <h3>Фон изображения для публикации</h3>
+          <p>В разделе «Поделиться» загружается собственный фон для превью в социальных сетях.</p>
+        </article>
+        <article class="premium-card reveal">
+          <div class="premium-card-icon premium-card-icon--star"><img src="images/artstar.png" alt=""></div>
+          <h3>Звезда у имени пользователя</h3>
+          <p>Знак из логотипа слева от @username отмечает карточку Star+.</p>
+        </article>
+        <article class="premium-card reveal">
+          <div class="premium-card-icon">♔</div>
+          <h3>Бейдж Star+</h3>
+          <p>Белый бейдж на карточке появляется автоматически.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="reveal">Сравнение оформления</h2>
+      <p class="section-lead reveal">Слева — бесплатная версия. Справа — сетка, шифр имени, наклон, звезда и бейдж.</p>
+      <div class="premium-demo">
+        <div class="premium-demo-col reveal">
+          <p class="premium-demo-label">Free</p>
+          <div class="premium-demo-stage" id="premium-demo-free"></div>
+          <p class="premium-demo-note">Без эффектов фона, имени и наклона</p>
+        </div>
+        <div class="premium-demo-col reveal">
+          <p class="premium-demo-label">Star+</p>
+          <div class="premium-demo-stage" id="premium-demo-pro"></div>
+          <p class="premium-demo-note">▦ сетка · # шифр · ⤡ наклон · ✦ звезда</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="reveal">Free и Star+</h2>
+      <table class="premium-compare reveal">
+        <thead>
+          <tr>
+            <th>Возможность</th>
+            <th>Free</th>
+            <th>Star+</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Карточка, конструктор, музыка</td>
+            <td class="premium-yes">есть</td>
+            <td class="premium-yes">есть</td>
+          </tr>
+          <tr>
+            <td>Видео-фон и GIF на фоне</td>
+            <td class="premium-no">нет</td>
+            <td class="premium-yes">доступно</td>
+          </tr>
+          <tr>
+            <td>Анимированный аватар GIF</td>
+            <td class="premium-no">только картинка</td>
+            <td class="premium-yes">доступно</td>
+          </tr>
+          <tr>
+            <td>Размер трека</td>
+            <td>до 10 МБ</td>
+            <td class="premium-yes">до 30 МБ</td>
+          </tr>
+          <tr>
+            <td>Визуализатор «Сияние»</td>
+            <td class="premium-no">нет</td>
+            <td class="premium-yes">доступно</td>
+          </tr>
+          <tr>
+            <td>Собственный шрифт .ttf</td>
+            <td class="premium-no">нет</td>
+            <td class="premium-yes">доступно</td>
+          </tr>
+          <tr>
+            <td>Посты</td>
+            <td class="premium-no">нет</td>
+            <td class="premium-yes">доступно</td>
+          </tr>
+          <tr>
+            <td>Собственный курсор и значок частиц .png</td>
+            <td class="premium-no">нет</td>
+            <td class="premium-yes">доступно</td>
+          </tr>
+          <tr>
+            <td>Сетка, сканлайны, наклон</td>
+            <td class="premium-no">нет</td>
+            <td class="premium-yes">доступно</td>
+          </tr>
+          <tr>
+            <td>Печатная машинка, перелив, шифр</td>
+            <td class="premium-no">нет</td>
+            <td class="premium-yes">доступно</td>
+          </tr>
+          <tr>
+            <td>Собственный фон изображения «Поделиться»</td>
+            <td class="premium-no">нет</td>
+            <td class="premium-yes">доступно</td>
+          </tr>
+          <tr>
+            <td>Звезда у имени пользователя и бейдж Star+</td>
+            <td class="premium-no">нет</td>
+            <td class="premium-yes">доступно</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="section cta-section premium-finale">
+    <div class="container">
+      <img class="premium-finale-star" src="images/artstar.png" alt="" aria-hidden="true">
+      <h2>Разовый платёж. Без ограничения по сроку.</h2>
+      <p>499 ₽ — доступ Star+ без ежемесячной оплаты.</p>
+      <a href="pay.html" class="btn btn-primary btn-lg premium-cta">Оформить Star+</a>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="index.html">Главная</a>
+        <a href="dashboard.html">Конструктор</a>
+        <a href="pay.html">Оплата</a>
+        <a href="offer.html">Оферта</a>
+        <a href="privacy.html">Конфиденциальность</a>
+        <a href="rules.html">Правила</a>
+      </div>
+      <p>© 2026 Art Star</p>
+    </div>
+  </footer>
+
+  <script src="js/auth.js"></script>
+  <script src="js/premium.js"></script>
+  <script src="js/verified.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/effects.js"></script>
+  <script src="js/card-widgets.js"></script>
+  <script src="js/social.js"></script>
+  <script src="js/widgets.js"></script>
+  <script src="js/profile-card.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/modal.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/ambient.js"></script>
+  <script src="js/premium-page.js"></script>
+</body>
+</html>

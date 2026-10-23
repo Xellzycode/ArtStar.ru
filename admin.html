@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Администрирование — Art Star</title>
+  <link rel="icon" href="images/artstar.png" type="image/png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+<body class="page-admin">
+
+  <div class="grain" aria-hidden="true"></div>
+  <div class="admin-sky" aria-hidden="true">
+    <canvas class="admin-sky-canvas" id="admin-canvas"></canvas>
+  </div>
+
+  <div id="admin-login" class="admin-login">
+    <form class="admin-login-card" id="admin-login-form">
+      <div class="admin-login-brand">
+        <img class="admin-login-mark" src="images/artstar.png" alt="">
+        <span class="logo-word logo-shine">Art Star</span>
+      </div>
+      <h1>Администрирование</h1>
+      <p>Только для команды Art Star</p>
+      <label class="form-label" for="admin-user">Логин</label>
+      <input class="form-input" id="admin-user" name="login" type="text" autocomplete="username" required>
+      <label class="form-label" for="admin-pass">Пароль</label>
+      <input class="form-input" id="admin-pass" name="password" type="password" autocomplete="current-password" required>
+      <p class="admin-error" id="admin-login-error" hidden></p>
+      <button type="submit" class="btn btn-primary admin-login-btn">Войти</button>
+      <a href="index.html" class="admin-back">На главную</a>
+    </form>
+  </div>
+
+  <div id="admin-app" class="admin-app">
+    <header class="admin-top">
+      <a href="index.html" class="admin-brand">
+        <img class="logo-mark" src="images/artstar.png" alt="">
+        <span class="logo-word logo-shine">Art Star</span>
+      </a>
+      <span class="admin-top-tag">Администрирование</span>
+      <button type="button" class="admin-leave" id="admin-logout">Выйти</button>
+    </header>
+
+    <nav class="admin-nav">
+      <button type="button" class="admin-nav-btn is-active" data-admin-view="overview">
+        <span class="admin-nav-ico" aria-hidden="true">◈</span>
+        <span>Обзор</span>
+      </button>
+      <button type="button" class="admin-nav-btn" data-admin-view="users">
+        <span class="admin-nav-ico" aria-hidden="true">◎</span>
+        <span>Пользователи</span>
+      </button>
+      <button type="button" class="admin-nav-btn" data-admin-view="reports">
+        <span class="admin-nav-ico" aria-hidden="true">⚑</span>
+        <span>Жалобы</span>
+        <span class="admin-nav-count" id="admin-report-count" hidden>0</span>
+      </button>
+      <button type="button" class="admin-nav-btn" data-admin-view="payments">
+        <span class="admin-nav-ico" aria-hidden="true">✦</span>
+        <span>Оплаты</span>
+      </button>
+      <button type="button" class="admin-nav-btn" data-admin-view="mail">
+        <span class="admin-nav-ico" aria-hidden="true">✉</span>
+        <span>Письма</span>
+      </button>
+      <button type="button" class="admin-nav-btn" data-admin-view="log">
+        <span class="admin-nav-ico" aria-hidden="true">☰</span>
+        <span>Журнал</span>
+      </button>
+    </nav>
+
+    <main class="admin-main">
+      <section class="admin-view" data-view="overview"></section>
+      <section class="admin-view hidden" data-view="users"></section>
+      <section class="admin-view hidden" data-view="reports"></section>
+      <section class="admin-view hidden" data-view="payments"></section>
+      <section class="admin-view hidden" data-view="mail"></section>
+      <section class="admin-view hidden" data-view="log"></section>
+    </main>
+  </div>
+
+  <script src="js/auth.js"></script>
+  <script src="js/premium.js"></script>
+  <script src="js/verified.js"></script>
+  <script src="js/api.js"></script>
+  <script src="js/social.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/ambient.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
